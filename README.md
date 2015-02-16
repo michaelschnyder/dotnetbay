@@ -29,7 +29,9 @@ The following products / tools are needed to contribute / fork.
 * NCrunch [http://www.ncrunch.net/](http://www.ncrunch.net/ http://www.ncrunch.net/)
 
 ## Authors
-* Michael Schnyder
+* Tizian Schmidlin <tizian.schmidlin@students.fhnw.ch>
+* Christian Weber <christian.weber3@students.fhnw.ch>
+* Roman Holzner <roman.holzner@students.fhnw.ch>
 
 ## License
 Licensed under the MIT License
