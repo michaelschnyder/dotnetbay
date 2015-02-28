@@ -8,6 +8,9 @@
         Title="MainWindow"
         Height="350"
         Width="525">
+    <Window.Resources>
+        <local:BoolToStatusConverter x:Key="boolToStatusConverter" />
+    </Window.Resources>
     <Grid>
        <Grid.RowDefinitions>
            <RowDefinition Height="Auto"/>
@@ -17,7 +20,7 @@
         <DataGrid Name="Auction" IsReadOnly="True" AutoGenerateColumns="False" Grid.Row="1" ItemsSource="{Binding Auctions}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Auction"></DataGridTextColumn>
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Status" Binding="{Binding IsRunning, Converter={StaticResource boolToStatusConverter}}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Start Price" Binding="{Binding StartPrice}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Current Price" Binding="{Binding CurrentPrice}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Bids" Binding="{Binding Bids.Count}" ></DataGridTextColumn>
