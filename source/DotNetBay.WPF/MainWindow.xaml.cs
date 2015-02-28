@@ -24,28 +24,24 @@ namespace DotNetBay.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ObservableCollection<Auction> auctions = new ObservableCollection<Auction>();
-
         public MainWindow()
         {
             InitializeComponent();
             this.InitAuctions();
         }
 
-        public ObservableCollection<Auction> Auctions
-        {
-            get { return auctions; }
-        }
+        public ObservableCollection<Auction> Auctions { get; private set; }
 
         private void InitAuctions()
         {
+            this.Auctions = new ObservableCollection<Auction>();
             App app = (App)App.Current;
             var memberService = new SimpleMemberService(app.MainRepository);
             var service = new AuctionService(app.MainRepository, memberService);
 
             foreach (var auction in service.GetAll())
             {
-                this.auctions.Add(auction);
+                this.Auctions.Add(auction);
             }
         }
     }
