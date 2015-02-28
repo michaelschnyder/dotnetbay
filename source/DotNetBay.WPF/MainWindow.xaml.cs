@@ -28,6 +28,7 @@ namespace DotNetBay.WPF
         {
             InitializeComponent();
             this.InitAuctions();
+            this.DataContext = this;
         }
 
         public ObservableCollection<Auction> Auctions { get; private set; }
