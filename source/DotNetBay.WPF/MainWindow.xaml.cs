@@ -26,7 +26,7 @@ namespace DotNetBay.WPF
     {
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
             this.InitAuctions();
             this.DataContext = this;
         }
