@@ -3,14 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:wpftk="http://schemas.xceed.com/wpf/xaml/toolkit"
         Title="SellView" Height="350" Width="525">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="Place Bid for Auction" FontSize="20" FontWeight="Bold" />
-        <Grid Grid.Row="1">
+    <DockPanel Margin="5,5,5,5">
+        <Label DockPanel.Dock="Top" Content="Place Bid for Auction" FontSize="20" FontWeight="Bold" />
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+            <Button Width="Auto" Content="Save" Margin="5,0,5,0"></Button>
+            <Button Width="Auto" Content="Cancel" Margin="5,0,5,0"></Button>
+        </StackPanel>
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -36,11 +35,12 @@
             <wpftk:DateTimePicker Grid.Row="3" Grid.Column="1" Margin="5,0,5,0" AllowSpin="True" ClipValueToMinMax="True"/>
             <wpftk:DateTimePicker Grid.Row="4" Grid.Column="1" Margin="5,0,5,0" AllowSpin="True" ClipValueToMinMax="True"/>
             <DockPanel Grid.Row="5" Grid.Column="1" >
-                <Button DockPanel.Dock="Right" Width="20" Content="..." Margin="5,0,5,0"></Button>
+                <Button DockPanel.Dock="Right" Width="20" Content="..." Margin="5,0,5,0" />
                 <TextBox Margin="5,0,5,0" />
             </DockPanel>
 
         </Grid>
 
-    </Grid>
+    </DockPanel>
+    
 </Window>
