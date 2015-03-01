@@ -10,6 +10,7 @@
         Width="525">
     <Window.Resources>
         <local:BoolToStatusConverter x:Key="boolToStatusConverter" />
+        <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
     </Window.Resources>
     <Grid>
        <Grid.RowDefinitions>
@@ -26,13 +27,13 @@
                 <DataGridTextColumn Header="Bids" Binding="{Binding Bids.Count}" ></DataGridTextColumn>
                 <DataGridTextColumn Header="Starts" Binding="{Binding StartDateTimeUtc}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Ends" Binding="{Binding EndDateTimeUtc}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Seller" Binding="{Binding Seller}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Current Winner" Binding="{Binding Winner}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Seller" Binding="{Binding Seller.DisplayName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Current Winner" Binding="{Binding Winner.DisplayName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Closed" Binding="{Binding IsClosed}"></DataGridTextColumn>
                 <DataGridTemplateColumn Header="Place Bid">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button>Bid</Button>
+                            <Button Visibility="{Binding Path=IsRunning, Converter={StaticResource booleanToVisibilityConverter}}">Bid</Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                     
