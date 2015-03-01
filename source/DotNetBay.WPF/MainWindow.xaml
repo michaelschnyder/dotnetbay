@@ -33,7 +33,9 @@
                 <DataGridTemplateColumn Header="Place Bid">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Visibility="{Binding Path=IsRunning, Converter={StaticResource booleanToVisibilityConverter}}">Bid</Button>
+                            <Button Visibility="{Binding Path=IsRunning, Converter={StaticResource booleanToVisibilityConverter}}" Command="{Binding Bid}">
+                                Bid
+                            </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                     

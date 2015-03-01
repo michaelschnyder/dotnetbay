@@ -4,24 +4,38 @@
         Title="SellView" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Label Content="Add New Auction" Grid.Row="0" FontSize="20" FontWeight="Bold" />
-        <Label Content="Title" Grid.Row="1" Grid.Column="0"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Title}"></TextBox>
-        
-        <Label Content="Description" Grid.Row="2" Grid.Column="0"/>
-        <Label Content="Start Price" Grid.Row="3" Grid.Column="0"/>
-        <Label Content="Start" Grid.Row="4" Grid.Column="0"/>
-        <Label Content="End" Grid.Row="5" Grid.Column="0"/>
-        <Label Content="Image" Grid.Row="6" Grid.Column="0"/>
-        
+        <Label Grid.Row="0" Content="Place Bid for Auction" FontSize="20" FontWeight="Bold" />
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Title"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Description"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Start Price"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Start"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="End"/>
+            <Label Grid.Row="5" Grid.Column="0" Content="Image"/>
+            
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="5,0,5,0"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="5,0,5,0"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="5,0,5,0"></TextBox>
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="5,0,5,0"></TextBox>
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="5,0,5,0"></TextBox>
+            <TextBox Grid.Row="5" Grid.Column="1" Margin="5,0,5,0"></TextBox>
+        </Grid>
+
     </Grid>
 </Window>

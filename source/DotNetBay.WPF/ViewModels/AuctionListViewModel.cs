@@ -18,11 +18,13 @@ namespace DotNetBay.WPF.ViewModels
         {
             this.InitAuctions();
             this.NewAuction = new NewAuctionCmd();
+            this.Bid = new BidCmd();
         }
 
         public ObservableCollection<Auction> Auctions { get; private set; }
 
         public ICommand NewAuction { get; private set; }
+        public ICommand Bid { get; private set; }
 
         private void InitAuctions()
         {
