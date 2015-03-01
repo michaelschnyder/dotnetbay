@@ -28,13 +28,17 @@
             <Label Grid.Row="3" Grid.Column="0" Content="Start"/>
             <Label Grid.Row="4" Grid.Column="0" Content="End"/>
             <Label Grid.Row="5" Grid.Column="0" Content="Image"/>
-            
+
             <TextBox Grid.Row="0" Grid.Column="1" Margin="5,0,5,0"></TextBox>
             <TextBox Grid.Row="1" Grid.Column="1" Margin="5,0,5,0"></TextBox>
             <TextBox Grid.Row="2" Grid.Column="1" Margin="5,0,5,0"></TextBox>
             <TextBox Grid.Row="3" Grid.Column="1" Margin="5,0,5,0"></TextBox>
             <TextBox Grid.Row="4" Grid.Column="1" Margin="5,0,5,0"></TextBox>
-            <TextBox Grid.Row="5" Grid.Column="1" Margin="5,0,5,0"></TextBox>
+            <DockPanel Grid.Row="5" Grid.Column="1" >
+                <Button DockPanel.Dock="Right" Width="20" Content="..." Margin="5,0,5,0"></Button>
+                <TextBox Margin="5,0,5,0" />
+            </DockPanel>
+
         </Grid>
 
     </Grid>
