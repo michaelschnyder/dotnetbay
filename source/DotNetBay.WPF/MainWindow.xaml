@@ -17,7 +17,7 @@
            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Width="75" Height="30" Padding="5" Margin="5" HorizontalAlignment="Left">New Auction</Button>
+        <Button Grid.Row="0" Width="Auto" Height="30" Padding="5" Margin="5" HorizontalAlignment="Left" Command="{Binding NewAuction}">New Auction</Button>
         <DataGrid Name="Auction" IsReadOnly="True" AutoGenerateColumns="False" Grid.Row="1" ItemsSource="{Binding Auctions}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Auction"></DataGridTextColumn>

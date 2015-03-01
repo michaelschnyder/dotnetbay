@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,23 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DotNetBay.Core;
-using DotNetBay.Model;
-using DotNetBay.WPF.ViewModels;
 
 namespace DotNetBay.WPF
 {
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaction logic for BidView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BidView : Window
     {
-        public MainWindow()
+        public BidView()
         {
-            this.InitializeComponent();
-            this.DataContext = new AuctionListViewModel();
+            InitializeComponent();
         }
     }
 }
