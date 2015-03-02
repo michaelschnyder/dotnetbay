@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNetBay.WPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace DotNetBay.WPF.View
         public BidView()
         {
             InitializeComponent();
+            this.DataContext = new BidViewModel();
         }
     }
 }
