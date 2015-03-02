@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace DotNetBay.WPF.Converters
+namespace DotNetBay.WPF.Converter
 {
     public class BoolToStatusConverter : IValueConverter
     {

@@ -16,7 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DotNetBay.Core;
 using DotNetBay.Model;
-using DotNetBay.WPF.ViewModel;
+using DotNetBay.WPF.ViewModels;
 
 namespace DotNetBay.WPF.View
 {
