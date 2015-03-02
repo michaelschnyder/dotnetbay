@@ -10,24 +10,22 @@ namespace DotNetBay.WPF.Command
 {
     public sealed class BidCmd : ICommand
     {
-
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
+        public Action<object> ExecuteDelegate { get; set; }
+        public Func<object, bool> CanExecuteDelegate { get; set; }
+            
+        #region ICommand Members
 
         public bool CanExecute(object parameter)
         {
-            return true;
+            return CanExecuteDelegate(parameter);
         }
-
+            
+        public event EventHandler CanExecuteChanged;
         public void Execute(object parameter)
         {
-            var view = new BidView();
-            view.ShowDialog();
+            ExecuteDelegate(parameter);
         }
-
-        
+            
+        #endregion
     }
 }

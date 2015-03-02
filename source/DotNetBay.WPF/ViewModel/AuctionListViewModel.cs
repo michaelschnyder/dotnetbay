@@ -8,6 +8,7 @@ using System.Windows.Input;
 using DotNetBay.Core;
 using DotNetBay.Model;
 using DotNetBay.WPF.Command;
+using DotNetBay.WPF.View;
 
 namespace DotNetBay.WPF.ViewModel
 {
@@ -19,12 +20,29 @@ namespace DotNetBay.WPF.ViewModel
             this.InitAuctions();
             this.NewAuction = new NewAuctionCmd();
             this.Bid = new BidCmd();
+            this.Bid.ExecuteDelegate = ShowBid;
+            this.NewAuction.ExecuteDelegate = this.ShowNewAuction;
+            this.Bid.CanExecuteDelegate = (o) => true;
+            this.NewAuction.CanExecuteDelegate = (o) => true;
         }
 
         public ObservableCollection<Auction> Auctions { get; private set; }
 
         public NewAuctionCmd NewAuction { get; private set; }
         public BidCmd Bid { get; private set; }
+
+
+        public void ShowBid(object parameter)
+        {
+            var view = new BidView();
+            view.ShowDialog();
+        }
+
+        public void ShowNewAuction(object parameter)
+        {
+            SellView view = new SellView();
+            view.ShowDialog();
+        }
 
         private void InitAuctions()
         {

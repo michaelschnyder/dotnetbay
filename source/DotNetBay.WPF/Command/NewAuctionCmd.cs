@@ -9,24 +9,25 @@ namespace DotNetBay.WPF.Command
 {
     public sealed class NewAuctionCmd : ICommand
     {
+        public Action<object> ExecuteDelegate { get; set; }
+        public Func<object, bool> CanExecuteDelegate { get; set; }
 
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
-
+        #region ICommand Members
 
         public bool CanExecute(object parameter)
         {
-            return true;
+            return CanExecuteDelegate(parameter);
         }
 
+        public event EventHandler CanExecuteChanged;
         public void Execute(object parameter)
         {
-            SellView view = new SellView();
-            view.ShowDialog();
+            ExecuteDelegate(parameter);
         }
+
+        #endregion
+
+        
 
     }
 }
