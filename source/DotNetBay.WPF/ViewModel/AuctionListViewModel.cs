@@ -23,8 +23,8 @@ namespace DotNetBay.WPF.ViewModel
 
         public ObservableCollection<Auction> Auctions { get; private set; }
 
-        public ICommand NewAuction { get; private set; }
-        public ICommand Bid { get; private set; }
+        public NewAuctionCmd NewAuction { get; private set; }
+        public BidCmd Bid { get; private set; }
 
         private void InitAuctions()
         {
