@@ -75,6 +75,9 @@
     </ApplicationDefinition>
     <Compile Include="Command\BidCmd.cs" />
     <Compile Include="Command\NewAuctionCmd.cs" />
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SellView.xaml.cs">
       <DependentUpon>SellView.xaml</DependentUpon>
     </Compile>
@@ -82,10 +85,6 @@
     <Page Include="View\BidView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -95,6 +94,10 @@
       <DependentUpon>BidView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\BoolToStatusConverter.cs" />
+    <Page Include="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\SellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
