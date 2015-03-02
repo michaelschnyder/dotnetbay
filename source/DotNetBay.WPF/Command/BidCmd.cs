@@ -1,11 +1,12 @@
-﻿using System;
+﻿using DotNetBay.WPF.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DotNetBay.WPF.Commands
+namespace DotNetBay.WPF.Command
 {
     public sealed class BidCmd : ICommand
     {

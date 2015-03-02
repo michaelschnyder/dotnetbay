@@ -18,7 +18,7 @@ using DotNetBay.Core;
 using DotNetBay.Model;
 using DotNetBay.WPF.ViewModels;
 
-namespace DotNetBay.WPF
+namespace DotNetBay.WPF.View
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml

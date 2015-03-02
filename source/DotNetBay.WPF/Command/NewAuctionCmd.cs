@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DotNetBay.WPF.Commands
+namespace DotNetBay.WPF.Command
 {
     public sealed class NewAuctionCmd : ICommand
     {

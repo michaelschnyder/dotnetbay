@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using DotNetBay.Core;
 using DotNetBay.Model;
-using DotNetBay.WPF.Commands;
+using DotNetBay.WPF.Command;
 
-namespace DotNetBay.WPF.ViewModels
+namespace DotNetBay.WPF.ViewModel
 {
     public sealed class AuctionListViewModel
     {

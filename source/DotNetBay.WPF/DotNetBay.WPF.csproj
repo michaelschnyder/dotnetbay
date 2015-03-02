@@ -73,8 +73,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\BidCmd.cs" />
-    <Compile Include="Commands\NewAuctionCmd.cs" />
+    <Compile Include="Command\BidCmd.cs" />
+    <Compile Include="Command\NewAuctionCmd.cs" />
     <Compile Include="View\SellView.xaml.cs">
       <DependentUpon>SellView.xaml</DependentUpon>
     </Compile>
