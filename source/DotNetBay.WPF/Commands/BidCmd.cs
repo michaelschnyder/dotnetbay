@@ -23,7 +23,7 @@ namespace DotNetBay.WPF.Commands
 
         public void Execute(object parameter)
         {
-            BidView view = new BidView();
+            var view = new BidView();
             view.ShowDialog();
         }
 

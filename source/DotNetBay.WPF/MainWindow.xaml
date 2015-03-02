@@ -3,14 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DotNetBay.WPF"
+        xmlns:conv="clr-namespace:DotNetBay.WPF.Converters"
         mc:Ignorable="d"
         Title="MainWindow"
         Height="350"
         Width="525">
     <Window.Resources>
-        <local:BoolToStatusConverter x:Key="boolToStatusConverter" />
-        <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
+        <conv:BoolToStatusConverter x:Key="BoolToStatusConverter" />
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     </Window.Resources>
     <Grid>
        <Grid.RowDefinitions>
@@ -21,7 +21,7 @@
         <DataGrid Name="Auction" IsReadOnly="True" AutoGenerateColumns="False" Grid.Row="1" ItemsSource="{Binding Auctions}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Auction"></DataGridTextColumn>
-                <DataGridTextColumn Header="Status" Binding="{Binding IsRunning, Converter={StaticResource boolToStatusConverter}}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Status" Binding="{Binding IsRunning, Converter={StaticResource BoolToStatusConverter}}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Start Price" Binding="{Binding StartPrice}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Current Price" Binding="{Binding CurrentPrice}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Bids" Binding="{Binding Bids.Count}" ></DataGridTextColumn>
@@ -33,7 +33,7 @@
                 <DataGridTemplateColumn Header="Place Bid">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Visibility="{Binding Path=IsRunning, Converter={StaticResource booleanToVisibilityConverter}}"
+                            <Button Visibility="{Binding Path=IsRunning, Converter={StaticResource BooleanToVisibilityConverter}}"
                                     Command="{Binding Path=DataContext.Bid,RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Content="Bid"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

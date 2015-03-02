@@ -94,7 +94,7 @@
     <Compile Include="BidView.xaml.cs">
       <DependentUpon>BidView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BoolToStatusConverter.cs" />
+    <Compile Include="Converters\BoolToStatusConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
