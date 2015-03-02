@@ -18,8 +18,8 @@ namespace DotNetBay.WPF.ViewModel
         public AuctionListViewModel()
         {
             this.InitAuctions();
-            this.NewAuction = new NewAuctionCmd();
-            this.Bid = new BidCmd();
+            this.NewAuction = new AuctionCmd<object>();
+            this.Bid = new AuctionCmd<object>();
             this.Bid.ExecuteDelegate = ShowBid;
             this.NewAuction.ExecuteDelegate = this.ShowNewAuction;
             this.Bid.CanExecuteDelegate = (o) => true;
@@ -28,8 +28,8 @@ namespace DotNetBay.WPF.ViewModel
 
         public ObservableCollection<Auction> Auctions { get; private set; }
 
-        public NewAuctionCmd NewAuction { get; private set; }
-        public BidCmd Bid { get; private set; }
+        public AuctionCmd<object> NewAuction { get; private set; }
+        public AuctionCmd<object> Bid { get; private set; }
 
 
         public void ShowBid(object parameter)
