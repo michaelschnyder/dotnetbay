@@ -29,5 +29,12 @@ namespace DotNetBay.WPF.ViewModel
                 window.Close();
             }
         }
+        protected void NotifyPropertyChanged(string propertyname)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
+            }
+        }
     }
 }
