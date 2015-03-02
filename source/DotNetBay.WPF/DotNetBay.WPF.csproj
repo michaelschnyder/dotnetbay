@@ -75,15 +75,15 @@
     </ApplicationDefinition>
     <Compile Include="Commands\BidCmd.cs" />
     <Compile Include="Commands\NewAuctionCmd.cs" />
-    <Compile Include="SellView.xaml.cs">
+    <Compile Include="View\SellView.xaml.cs">
       <DependentUpon>SellView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\AuctionListViewModel.cs" />
-    <Page Include="BidView.xaml">
+    <Compile Include="ViewModel\AuctionListViewModel.cs" />
+    <Page Include="View\BidView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -91,15 +91,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BidView.xaml.cs">
+    <Compile Include="View\BidView.xaml.cs">
       <DependentUpon>BidView.xaml</DependentUpon>
     </Compile>
     <Compile Include="BoolToStatusConverter.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SellView.xaml">
+    <Page Include="View\SellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
