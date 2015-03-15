@@ -17,6 +17,8 @@ namespace DotNetBay.Model
 
         public List<Auction> Auctions { get; set; }
 
-        public List<Bid> Bids { get; set; } 
+        public List<Bid> Bids { get; set; }
+
+        public string Location { get; set; }
     }
 }
