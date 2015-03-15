@@ -4,14 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using DotNetBay.Model;
 
 namespace DotNetBay.Data.EF
 {
-    class MainDbContext : DbContext
+    public class MainDbContext : DbContext
     {
-        MainDbContext()
+        public MainDbContext()
             : base("DatabaseConnection")
         {
+            this.Configuration.ProxyCreationEnabled = false;
+            this.Configuration.LazyLoadingEnabled = false;
         }
+
     }
 }
