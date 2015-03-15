@@ -4,6 +4,7 @@ using System.Linq;
 using DotNetBay.Core;
 using DotNetBay.Core.Execution;
 using DotNetBay.Data.FileStorage;
+using DotNetBay.Data.EF;
 
 namespace DotNetBay.Cmd
 {
@@ -17,6 +18,7 @@ namespace DotNetBay.Cmd
             Console.WriteLine("DotNetBay Commandline");
 
             var store = new FileSystemMainRepository("store.json");
+            // TODO var store = new EFMainRepository();
             
             var auctionService = new AuctionService(store, new SimpleMemberService(store));
             var auctionRunner = new AuctionRunner(store);

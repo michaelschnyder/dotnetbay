@@ -79,6 +79,10 @@
       <Project>{9EF46B21-B552-4CC6-A4C0-E81091A4064B}</Project>
       <Name>DotNetBay.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DotNetBay.Data.EF\DotNetBay.Data.EF.csproj">
+      <Project>{b79e0b3c-1b31-4b0b-a606-c1dccc951c7e}</Project>
+      <Name>DotNetBay.Data.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DotNetBay.Data.FileStorage\DotNetBay.Data.FileStorage.csproj">
       <Project>{92942123-C7EC-4418-9B48-F5D62BE7E7A3}</Project>
       <Name>DotNetBay.Data.FileStorage</Name>

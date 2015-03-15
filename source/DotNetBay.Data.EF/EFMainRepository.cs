@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,13 @@ using DotNetBay.Model;
 
 namespace DotNetBay.Data.EF
 {
-    class EFMainRepository : IMainRepository
+    public class EFMainRepository : IMainRepository
     {
         public EFMainRepository()
         {
         }
+
+        public Database Database { get; set; }
 
         public IQueryable<Auction> GetAuctions()
         {

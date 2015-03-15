@@ -12,6 +12,7 @@ using DotNetBay.Data;
 using DotNetBay.Data.FileStorage;
 using DotNetBay.Core.Execution;
 using DotNetBay.Model;
+using DotNetBay.Data.EF;
 
 namespace DotNetBay.WPF
 {
@@ -24,6 +25,7 @@ namespace DotNetBay.WPF
         public App()
         {
             this.MainRepository = new FileSystemRepositoryFactory("store.json").CreateMainRepository();
+            // TODO this.MainRepository = new EFMainRepositoryFactory().CreateMainRepository();
             this.AuctionRunner = new AuctionRunner(this.MainRepository);
             this.AuctionRunner.Start();
             this.InitDemoAuctions();
