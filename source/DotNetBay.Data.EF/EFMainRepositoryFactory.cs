@@ -9,13 +9,17 @@ namespace DotNetBay.Data.EF
 {
     public class EFMainRepositoryFactory : IRepositoryFactory
     {
+        private IList<EFMainRepository> repositories = new List<EFMainRepository>();
         public void Dispose()
         {
+            this.repositories.Clear();
         }
 
         public IMainRepository CreateMainRepository()
         {
-            return new EFMainRepository();
+            EFMainRepository repo = new EFMainRepository();
+            this.repositories.Add(repo);
+            return repo;
         }
     }
 }
