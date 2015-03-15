@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EFMainRepository.cs" />
+    <Compile Include="EFMainRepositoryFactory.cs" />
     <Compile Include="MainDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
