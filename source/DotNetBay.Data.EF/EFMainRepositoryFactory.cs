@@ -7,7 +7,7 @@ using DotNetBay.Interfaces;
 
 namespace DotNetBay.Data.EF
 {
-    class EFMainRepositoryFactory : IRepositoryFactory
+    public class EFMainRepositoryFactory : IRepositoryFactory
     {
         public void Dispose()
         {
