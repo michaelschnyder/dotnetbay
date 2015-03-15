@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateTime2Convention.cs" />
     <Compile Include="EFMainRepository.cs" />
     <Compile Include="EFMainRepositoryFactory.cs" />
     <Compile Include="MainDbContext.cs" />
