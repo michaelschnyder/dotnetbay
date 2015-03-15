@@ -9,5 +9,9 @@ namespace DotNetBay.Data.EF
 {
     class MainDbContext : DbContext
     {
+        MainDbContext() : base("MainDbContext")
+        {
+            
+        }
     }
 }
