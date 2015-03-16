@@ -11,50 +11,62 @@ namespace DotNetBay.Data.EF
 {
     public class EFMainRepository : IMainRepository
     {
+        private MainDbContext dbContext;
+
         public EFMainRepository()
         {
+            dbContext = new MainDbContext();
         }
 
-        public Database Database { get; set; }
+        public Database Database
+        {
+            get
+            {
+                return dbContext.Database;    
+            }
+        }
 
         public IQueryable<Auction> GetAuctions()
         {
-            throw new NotImplementedException();
+            return this.dbContext.Auctions;
         }
 
         public IQueryable<Member> GetMembers()
         {
-            throw new NotImplementedException();
+            return this.dbContext.Members;
         }
 
         public Auction Add(Auction auction)
         {
-            throw new NotImplementedException();
+            return this.dbContext.Auctions.Add(auction);
         }
 
         public Auction Update(Auction auction)
         {
-            throw new NotImplementedException();
+            this.dbContext.SaveChanges();
+            return auction;
         }
 
         public Bid Add(Bid bid)
         {
-            throw new NotImplementedException();
+            return this.dbContext.Bids.Add(bid);
         }
 
         public Bid GetBidByTransactionId(Guid transactionId)
         {
-            throw new NotImplementedException();
+            return this.dbContext
+                .Bids.Where(b => b.TransactionId == transactionId)
+                .FirstOrDefault();
         }
 
         public Member Add(Member member)
         {
-            throw new NotImplementedException();
+            return this.dbContext.Members.Add(member);
         }
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            this.dbContext.SaveChanges();
         }
     }
 }

@@ -12,6 +12,10 @@ namespace DotNetBay.Data.EF
         private IList<EFMainRepository> repositories = new List<EFMainRepository>();
         public void Dispose()
         {
+            foreach (EFMainRepository repo in this.repositories)
+            {
+                repo.Database.Delete();
+            }
             this.repositories.Clear();
         }
 
