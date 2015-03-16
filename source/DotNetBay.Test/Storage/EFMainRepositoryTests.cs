@@ -10,7 +10,7 @@ using NUnit.Framework;
 
 namespace DotNetBay.Test.Storage
 {
-    [Category("Database"),Ignore]
+    [Category("Database")]
     class EFMainRepositoryTests : MainRepositoryTestBase
     {
         protected override IRepositoryFactory CreateFactory()

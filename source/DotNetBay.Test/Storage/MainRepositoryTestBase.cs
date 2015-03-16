@@ -10,7 +10,7 @@ using NUnit.Framework;
 
 namespace DotNetBay.Test.Storage
 {
-    [SuppressMessage("ReSharper", "InconsistentNaming", Justification = "This are tests")]
+    [SuppressMessage("ReSharper", "InconsistentNaming", Justification = "These are tests")]
     public abstract class MainRepositoryTestBase
     {
         [TestCase]
