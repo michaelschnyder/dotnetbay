@@ -171,6 +171,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BidsController.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="WebAppUnityContainer.cs" />
     <Compile Include="ViewModel\NewBidViewModel.cs" />
     <Compile Include="ViewModel\NewAuctionViewModel.cs" />
     <Compile Include="Controllers\AuctionsController.cs" />
