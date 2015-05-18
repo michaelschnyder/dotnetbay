@@ -1,17 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using System.Web.UI.WebControls;
 
-using DotNetBay.Core;
 using DotNetBay.Core.Execution;
 using DotNetBay.Data.EF;
-using DotNetBay.Interfaces;
 using DotNetBay.SignalR.Hubs;
-
-using Microsoft.AspNet.SignalR;
 
 namespace DotNetBay.WebApp
 {
@@ -24,6 +17,7 @@ namespace DotNetBay.WebApp
             // MVC related startup
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            UnityConfig.RegisterComponents();                           
 
             // DotNetBay startup
             var mainRepository = new EFMainRepository();
@@ -37,7 +31,6 @@ namespace DotNetBay.WebApp
 
             AuctionRunner.Auctioneer.BidAccepted += (sender, args) => AuctionsHub.NotifyNewBid(args.Auction, args.Bid);
         }
-
         
     }
 }
