@@ -3,7 +3,6 @@ using System.Linq;
 using System.Web.Http;
 
 using DotNetBay.Core;
-using DotNetBay.Data.EF;
 using DotNetBay.Interfaces;
 using DotNetBay.Model;
 using DotNetBay.WebApi.Dtos;
@@ -18,12 +17,11 @@ namespace DotNetBay.WebApi.Controller
 
         private IMainRepository repo;
 
-        public BidsController()
+        public BidsController(IAuctionService auctionService, IMemberService memberService, IMainRepository repo)
         {
-            this.repo = new EFMainRepository();
-            this.memberService = new SimpleMemberService(this.repo);
-
-            this.auctionService = new AuctionService(this.repo, this.memberService);
+            this.auctionService = auctionService;
+            this.memberService = memberService;
+            this.repo = repo;
         }
 
         [HttpGet]
