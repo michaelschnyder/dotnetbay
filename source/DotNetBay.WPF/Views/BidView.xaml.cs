@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 
-using DotNetBay.Core;
 using DotNetBay.Model;
-using DotNetBay.WPF.Services;
 using DotNetBay.WPF.ViewModel;
+
+using Microsoft.Practices.Unity;
 
 namespace DotNetBay.WPF.Views
 {
@@ -16,9 +16,7 @@ namespace DotNetBay.WPF.Views
         {
             this.InitializeComponent();
 
-            var auctionService = new RemoteAuctionService();
-
-            this.DataContext = new BidViewModel(selectedAuction, auctionService);
+            this.DataContext = WpfUnityContainer.Instance.Resolve<BidViewModel>(new ParameterOverride("selectedAuction", selectedAuction));
         }
     }
 }

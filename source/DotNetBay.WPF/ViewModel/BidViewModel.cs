@@ -14,7 +14,7 @@ namespace DotNetBay.WPF.ViewModel
 
         private readonly Auction selectedAuction;
 
-        public BidViewModel(Auction selectedAuction,IAuctionService auctionService)
+        public BidViewModel(Auction selectedAuction, IAuctionService auctionService)
         {
             this.auctionService = auctionService;
             this.selectedAuction = selectedAuction;

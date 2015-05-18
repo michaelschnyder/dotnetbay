@@ -13,8 +13,6 @@ namespace DotNetBay.WPF.ViewModel
 {
     public class SellViewModel : ViewModelBase
     {
-        private readonly IMemberService memberService;
-
         private readonly IAuctionService auctionService;
 
         private string filePathToImage;
