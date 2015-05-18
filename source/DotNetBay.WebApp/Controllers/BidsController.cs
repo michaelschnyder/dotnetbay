@@ -15,10 +15,10 @@ namespace DotNetBay.WebApp.Controllers
 
         private IAuctionService service;
 
-        public BidsController()
+        public BidsController(IMainRepository mainRepository, IAuctionService service)
         {
-            this.mainRepository = new EFMainRepository();
-            this.service = new AuctionService(this.mainRepository, new SimpleMemberService(this.mainRepository));
+            this.mainRepository = mainRepository;
+            this.service = service;
         }
 
         // GET: Bids

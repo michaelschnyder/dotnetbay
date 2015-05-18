@@ -17,11 +17,10 @@ namespace DotNetBay.WebApp.Controllers
 
         private readonly EFMainRepository mainRepository;
 
-        public AuctionsController()
+        public AuctionsController(IAuctionService service, EFMainRepository mainRepository)
         {
-            this.mainRepository = new EFMainRepository();
-
-            this.service = new AuctionService(this.mainRepository, new SimpleMemberService(this.mainRepository));
+            this.service = service;
+            this.mainRepository = mainRepository;
         }
 
         // GET: Auctions
