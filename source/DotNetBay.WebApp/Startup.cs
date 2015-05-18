@@ -20,6 +20,8 @@ namespace DotNetBay.WebApp
             // Configure Web API for self-host. 
             var config = new HttpConfiguration();
 
+            config.DependencyResolver = new WebApiUnityResolver(WebAppUnityContainer.Instance);
+
             config.MapHttpAttributeRoutes();
 
             config.Formatters.JsonFormatter.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
